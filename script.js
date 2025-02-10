@@ -12,7 +12,7 @@ window.addEventListener('load', () => {
             blackScreen.style.display = 'flex';
 
             // Typing Animation on Black Screen
-            const text = "Welcome!";
+            const text = "Welcome";
             let i = 0;
             function typeWriter() {
                 if (i < text.length) {
@@ -49,6 +49,7 @@ window.addEventListener('load', () => {
         }
     });
 });
+
 info page");
     document.getElementById("main-page").style.display = "none";
     document.getElementById("info-page").style.display = "block";

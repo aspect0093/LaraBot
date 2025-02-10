@@ -27,7 +27,9 @@ body {
 
 #splash-screen img {
     width: 200px; /* Adjust size */
-    border-radius: 10px;
+    /* height: 200px;  Adjust size - REMOVED HEIGHT*/
+    /* border-radius: 50%; */
+    /* object-fit: cover; */
     margin-bottom: 20px;
     animation: fadeIn 1s ease-in-out;
 }
@@ -126,8 +128,9 @@ body {
 
 .image-lara-container img {
     width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    /* height: 100px;  REMOVED HEIGHT */
+    /* border-radius: 50%; */
+    /* object-fit: cover; */
     margin-right: 20px;
 }
 
@@ -163,15 +166,7 @@ body {
         margin-bottom: 10px;
     }
 }
-font-size: 2.5em;
-    margin-bottom: 0.8em;
-    text-align: center;
-}
-
-#info-page h3 {
-    font-size: 1.8em;
-    margin-top: 1.2em;
-    margin-bottom: 0.5em;
+ttom: 0.5em;
 }
 
 #info-page ul {
