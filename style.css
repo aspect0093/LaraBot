@@ -23,6 +23,7 @@ body, html {
     align-items: center;
     justify-content: center;
     transition: opacity 1s ease-out;
+    z-index: 1000; /* Ensure it's on top */
 }
 
 #splash-image {
@@ -56,10 +57,10 @@ body, html {
     width: 100%;
     height: 100%;
     background-color: black;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 900; /* Below splash screen but above main page */
 }
 
 #typing-text {
@@ -84,6 +85,9 @@ body, html {
     align-items: center;
     justify-content: center;
     padding: 20px;
+    height: 100%; /* Make sure it occupies the full height */
+    z-index: 800; /* Behind welcome screen */
+    position: relative; /*  Required for z-index to work */
 }
 
 #profile-img {
@@ -123,18 +127,8 @@ body, html {
 
 @keyframes blink {
     50% { border-color: transparent; }
-}transparent; }
-}@keyframes blink {
-    50% { border-color: transparent; }
-}er-blur {
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
-    color: white;
-    font-size: 16px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+}
+100%;
     text-align: center;
     padding: 10px;
     border-top: 1px solid #1a73e8;

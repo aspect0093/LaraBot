@@ -1,39 +1,44 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Splash Screen Timer
-    setTimeout(() => {
-        document.getElementById("splash-screen").style.opacity = "0";  // Fade out splash screen
-        setTimeout(() => {
-            document.getElementById("splash-screen").style.display = "none";  // Hide splash screen
-            document.getElementById("welcome-screen").style.display = "flex";  // Show welcome screen
-            startTypingAnimation("typing-text", "Welcome to the Site!");
-        }, 1000);  // Wait for fade-out to complete
-    }, 3000);  // Splash screen stays for 3 seconds
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lara</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    // Swipe Up Gesture Detection
-    let touchStartY = 0;
-    let touchEndY = 0;
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <img id="splash-image" src="https://media.discordapp.net/attachments/1330537072951296096/1338433038056558663/a8479a922b151b03df56a6db105dc5dd.jpg" alt="Custom Image">
+        <p id="splash-text">Lara</p>
+        <p id="splash-footer">Made by X</p>
+    </div>
 
-    document.addEventListener("touchstart", (e) => {
-        touchStartY = e.touches[0].clientY;
-    });
+    <!-- Welcome Page -->
+    <div id="welcome-screen">
+        <h1 id="typing-text"></h1>
+        <p id="swipe-up">Swipe Up</p>
+    </div>
 
-    document.addEventListener("touchend", (e) => {
-        touchEndY = e.changedTouches[0].clientY;
-        if (touchStartY - touchEndY > 50) { // If swipe-up gesture detected
-            document.getElementById("welcome-screen").style.display = "none"; // Hide welcome screen
-            document.getElementById("main-page").style.display = "flex"; // Show main page
-        }
-    });
-});
+    <!-- Main Page -->
+    <div id="main-page">
+        <h1>Welcome</h1>
+        <div class="profile">
+            <img id="profile-img" src="https://media.discordapp.net/attachments/1330537072951296096/1338433038056558663/a8479a922b151b03df56a6db105dc5dd.jpg" alt="User Image">
+            <p id="custom-text">Lara</p>
+        </div>
+        <div class="buttons">
+            <button onclick="redirectTo('https://discord.com/oauth2/authorize?client_id=1338143657877835797&permissions=8&scope=bot')">Invite</button>
+            <button onclick="redirectTo('https://forms.gle/TU9SxCcrH41obCb68')">Suggestion</button>
+            <button onclick="redirectTo('https://discord.gg/TYMVHDZ3T8')">Partner Server</button>
+        </div>
+    </div>
 
-// Typing Animation Function
-function startTypingAnimation(elementId, text) {
-    let element = document.getElementById(elementId);
-    let index = 0;
-
-    function typeCharacter() {
-        if (index < text.length) {
-            element.innerHTML += text.charAt(index); // Add character to element
+    <script src="script.js"></script>
+</body>
+</html>
+ement
             index++;
             setTimeout(typeCharacter, 100); // Delay for each character
         }
