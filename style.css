@@ -23,6 +23,7 @@ body, html {
     align-items: center;
     justify-content: center;
     transition: opacity 1s ease-out;
+    opacity: 1;
 }
 
 #splash-image {
@@ -125,8 +126,7 @@ body, html {
 
 @keyframes blink {
     50% { border-color: transparent; }
-}th blur */
-.footer-blur {
+}er-blur {
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
     color: white;

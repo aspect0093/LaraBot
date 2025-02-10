@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
     // Splash Screen Timer
     setTimeout(() => {
@@ -47,7 +46,7 @@ function startTypingAnimation(elementId, text) {
 // Redirect Function for buttons
 function redirectTo(url) {
     window.location.href = url; // Redirect to the specified URL
-}ext
+}}ext
     typeCharacter(); // Start typing effect
 }
 
