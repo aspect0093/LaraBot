@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Splash Screen */
+#splash-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s ease-out;
+}
+
+#splash-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#splash-text {
+    font-size: 24px;
+    margin-top: 10px;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Made by X Text */
+#splash-footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.7;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Welcome Screen */
+#welcome-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#typing-text {
+    font-size: 32px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid white;
+    animation: typing 3s steps(20, end), blink 1s infinite;
+}
+
+#swipe-up {
+    position: absolute;
+    bottom: 20px;
+    font-size: 18px;
+    opacity: 0.7;
+}
+
+/* Main Page */
+#main-page {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Make the profile image circular */
+#profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;  /* Ensures a perfect circle */
+    object-fit: cover;  /* Ensures the image fits within the circle */
+    border: 2px solid white; /* Optional: Adds a border around the image */
+}
+
+.buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.buttons button:hover {
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}d-color: #0c5dbd; /* Slight darkening on hover */
+}
+
+/* Footer with blur */
+.footer-blur {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    color: white;
+    font-size: 16px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #1a73e8;
+    z-index: 999; /* Ensure it's above all content */
+}
+
+/* Back Button Styling */
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.back-button:hover {
+    color: #1a73e8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* Info Page Styling */
+#info-page {
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: auto;
+    background-color: #222222;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.commands-list h2 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.commands-list p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* Motion Blur and Smooth Scroll Effect */
+body {
+    transition: all 0.3s ease-in-out; /* Add smooth transitions */
+}
+
+html {
+    scroll-behavior: smooth;
+}
