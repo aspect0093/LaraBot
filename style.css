@@ -40,7 +40,6 @@ body, html {
     animation: fadeIn 2s ease-in-out;
 }
 
-/* Made by X Text */
 #splash-footer {
     position: absolute;
     bottom: 20px;
@@ -88,7 +87,6 @@ body, html {
     padding: 20px;
 }
 
-/* Make the profile image circular */
 #profile-img {
     width: 100px;
     height: 100px;
@@ -125,6 +123,8 @@ body, html {
 }
 
 @keyframes blink {
+    50% { border-color: transparent; }
+}@keyframes blink {
     50% { border-color: transparent; }
 }er-blur {
     background-color: rgba(0, 0, 0, 0.5);
