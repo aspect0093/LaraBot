@@ -24,11 +24,18 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("main-page").style.display = "flex";
         }
     });
+
+    console.log("JavaScript loaded successfully!"); // Debugging
 });
 
 // Typing Animation Function
 function startTypingAnimation(elementId, text) {
     let element = document.getElementById(elementId);
+    if (!element) {
+        console.error("startTypingAnimation: Element not found:", elementId);
+        return;
+    }
+
     let index = 0;
     function typeCharacter() {
         if (index < text.length) {
@@ -43,26 +50,23 @@ function startTypingAnimation(elementId, text) {
 
 // Redirect Function
 function redirectTo(url) {
+    console.log("redirectTo: Redirecting to", url);
     window.location.href = url;
 }
 
 // Info Page Functions
 function goToInfoPage() {
+     console.log("goToInfoPage: Displaying info page");
     document.getElementById("main-page").style.display = "none";
     document.getElementById("info-page").style.display = "block";
 }
 
 function goToMainPage() {
+    console.log("goToMainPage: Displaying main page");
     document.getElementById("info-page").style.display = "none";
     document.getElementById("main-page").style.display = "flex";
 }
-EndY = e.changedTouches[0].clientY;
-        if (touchStartY - touchEndY > 50) { // If swipe-up gesture detected
-            const welcomeScreen = document.getElementById("welcome-screen");
-            const mainPage = document.getElementById("main-page");
-
-            if (welcomeScreen && mainPage) {
-                console.log("Swipe up detected, hiding welcome screen, showing main page"); // Debugging
+hiding welcome screen, showing main page"); // Debugging
                 welcomeScreen.style.display = "none"; // Hide welcome screen
                 mainPage.style.display = "flex"; // Show main page
             } else {

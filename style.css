@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 /* General Styles */
 body, html {
@@ -6,11 +6,11 @@ body, html {
     padding: 0;
     width: 100%;
     height: 100%;
-    font-family: 'Poppins', sans-serif;
-    background-color: #121212; /* Dark background */
-    color: #fff; /* White text */
+    font-family: 'Roboto', sans-serif; /* Custom Font */
+    background-color: #121212;
+    color: #fff;
     text-align: center;
-    overflow: hidden; /* Prevents scrolling */
+    overflow: hidden;
 }
 
 /* Splash Screen */
@@ -18,7 +18,7 @@ body, html {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: #000; /* Black background */
+    background-color: #000;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,14 +32,14 @@ body, html {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #fff; /* White border */
+    border: 3px solid #fff;
     animation: rotateDown 2s linear infinite, fadeIn 1.5s ease-in-out; /* Image Animation */
 }
 
 #splash-text {
     font-size: 2em;
     margin-top: 10px;
-    font-weight: 600;
+    font-weight: 700;
     animation: fadeIn 2s ease-in-out;
 }
 
@@ -58,7 +58,7 @@ body, html {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: #000; /* Black background */
+    background-color: #000;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -86,7 +86,7 @@ body, html {
     display: none;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Align content to the top */
+    justify-content: flex-start;
     padding: 2em;
     height: 100%;
     z-index: 800;
@@ -111,11 +111,7 @@ body, html {
     object-fit: cover;
     border: 2px solid #fff;
     margin-right: 1em;
-    transition: transform 0.3s ease; /* Hover animation */
-}
-
-#profile-img:hover {
-    transform: scale(1.1);
+    animation: spin 4s linear infinite; /* Profile Image Spin */
 }
 
 #custom-text {
@@ -132,7 +128,7 @@ body, html {
     margin: 0.5em;
     padding: 0.8em 2em;
     font-size: 1.2em;
-    background-color: #333; /* Dark button color */
+    background-color: #333;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -141,8 +137,8 @@ body, html {
 }
 
 .buttons button:hover {
-    background-color: #555; /* Lighter on hover */
-    transform: translateY(-3px); /* Subtle lift on hover */
+    background-color: #555;
+    transform: translateY(-3px);
 }
 
 /* Info Page */
@@ -153,13 +149,13 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #121212; /* Dark background */
+    background-color: #121212;
     color: #fff;
     padding: 2em;
-    overflow-y: auto; /* Allow scrolling */
-    z-index: 1100; /* Above all */
+    overflow-y: auto;
+    z-index: 1100;
     text-align: left;
-    box-sizing: border-box; /* Include padding in width/height */
+    box-sizing: border-box;
 }
 
 .info-container {
@@ -231,6 +227,27 @@ body, html {
     }
     100% {
         opacity: 0.7;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotateDown {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(180deg); /* Move down slightly */
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+ 0.7;
         transform: translateY(0);
     }
 }
