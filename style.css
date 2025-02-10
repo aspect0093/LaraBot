@@ -23,7 +23,6 @@ body, html {
     align-items: center;
     justify-content: center;
     transition: opacity 1s ease-out;
-    opacity: 1;
 }
 
 #splash-image {
@@ -124,6 +123,7 @@ body, html {
 
 @keyframes blink {
     50% { border-color: transparent; }
+}transparent; }
 }@keyframes blink {
     50% { border-color: transparent; }
 }er-blur {
