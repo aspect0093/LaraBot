@@ -1,62 +1,55 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Splash Screen Timer
+window.addEventListener('load', () => {
+    const splashScreen = document.getElementById('splash-screen');
+    const blackScreen = document.getElementById('black-screen');
+    const mainPage = document.getElementById('main-page');
+    const welcomeText = document.getElementById('welcome-text');
+
+    // Splash Screen Fade Out
     setTimeout(() => {
-        document.getElementById("splash-screen").style.opacity = "0";
+        splashScreen.style.opacity = '0'; // Fade out
         setTimeout(() => {
-            document.getElementById("splash-screen").style.display = "none";
-            document.getElementById("welcome-screen").style.display = "flex";
-            startTypingAnimation("typing-text", "Welcome!");
-        }, 1000);
-    }, 3000);
+            splashScreen.style.display = 'none';
+            blackScreen.style.display = 'flex';
 
-    // Swipe Up Gesture Detection
+            // Typing Animation on Black Screen
+            const text = "Welcome!";
+            let i = 0;
+            function typeWriter() {
+                if (i < text.length) {
+                    welcomeText.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100); // Adjust speed
+                } else {
+                    //Typing Complete
+                }
+            }
+            typeWriter();
+
+        }, 1000); // Delay after fade out
+    }, 3000); // Adjust splash screen duration
+
+    // Swipe Up Functionality
     let touchStartY = 0;
-    let touchEndY = 0;
 
-    document.addEventListener("touchstart", (e) => {
+    blackScreen.addEventListener('touchstart', (e) => {
         touchStartY = e.touches[0].clientY;
     });
 
-    document.addEventListener("touchend", (e) => {
-        touchEndY = e.changedTouches[0].clientY;
-        if (touchStartY - touchEndY > 50) {
-            document.getElementById("welcome-screen").style.display = "none";
-            document.getElementById("main-page").style.display = "flex";
+    blackScreen.addEventListener('touchend', (e) => {
+        const touchEndY = e.changedTouches[0].clientY;
+        const swipeDistance = touchStartY - touchEndY;
+
+        if (swipeDistance > 50) { // Adjust sensitivity
+            blackScreen.style.display = 'none';
+            mainPage.style.display = 'block';
+            // Add a class to trigger the fade-in effect
+            setTimeout(() => {
+                mainPage.classList.add('visible');
+            }, 50); // Small delay to ensure display is block
         }
     });
-
-    console.log("JavaScript loaded successfully!"); // Debugging
 });
-
-// Typing Animation Function
-function startTypingAnimation(elementId, text) {
-    let element = document.getElementById(elementId);
-    if (!element) {
-        console.error("startTypingAnimation: Element not found:", elementId);
-        return;
-    }
-
-    let index = 0;
-    function typeCharacter() {
-        if (index < text.length) {
-            element.innerHTML += text.charAt(index);
-            index++;
-            setTimeout(typeCharacter, 100);
-        }
-    }
-    element.innerHTML = "";
-    typeCharacter();
-}
-
-// Redirect Function
-function redirectTo(url) {
-    console.log("redirectTo: Redirecting to", url);
-    window.location.href = url;
-}
-
-// Info Page Functions
-function goToInfoPage() {
-     console.log("goToInfoPage: Displaying info page");
+info page");
     document.getElementById("main-page").style.display = "none";
     document.getElementById("info-page").style.display = "block";
 }
