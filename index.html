@@ -1,42 +1,51 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lara's Website</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Lara</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div id="splash-screen">
-        <img src="https://media.discordapp.net/attachments/1330537072951296096/1338512788045303819/Picsart_25-02-10_19-41-23-248.png?ex=67ab5aad&is=67aa092d&hm=4e7eb47e87f58fdbe60280777452e2a60a03bde290d4dc22e05f7f07f4670cb7&" alt="Custom Image">
-        <div class="circle-animation"></div>
-        <div class="text">Lara</div>
-        <div class="made-by">Made By X</div>
+    <!-- Splash Screen -->
+    <div class="splash">
+        <img src="https://media.discordapp.net/attachments/1330537072951296096/1338512788045303819/Picsart_25-02-10_19-41-23-248.png?ex=67ab5aad&is=67aa092d&hm=4e7eb47e87f58fdbe60280777452e2a60a03bde290d4dc22e05f7f07f4670cb7&" alt="Custom Logo">
+        <h1 class="game-title">Lara</h1>
     </div>
 
-    <div id="black-screen">
-        <h1 id="welcome-text">Welcome</h1>
-        <div id="swipe-up">Swipe Up</div>
-    </div>
-
-    <div id="main-page" style="display: none;">
+    <!-- Main Page -->
+    <div class="main-container">
         <h1>Welcome</h1>
-        <div class="image-lara-container">
-            <img src="https://media.discordapp.net/attachments/1330537072951296096/1338512788045303819/Picsart_25-02-10_19-41-23-248.png?ex=67ab5aad&is=67aa092d&hm=4e7eb47e87f58fdbe60280777452e2a60a03bde290d4dc22e05f7f07f4670cb7&" alt="Custom Circle Image">
-            <div>Lara</div>
+        
+        <div class="profile">
+            <img src="https://media.discordapp.net/attachments/1330537072951296096/1338512788045303819/Picsart_25-02-10_19-41-23-248.png?ex=67ab5aad&is=67aa092d&hm=4e7eb47e87f58fdbe60280777452e2a60a03bde290d4dc22e05f7f07f4670cb7&" alt="Profile Image">
+            <h2>Lara</h2>
+            <hr>
         </div>
-        <div class="buttons">
-            <button onclick="window.location.href='https://discord.com/oauth2/authorize?client_id=1338143657877835797&permissions=8&integration_type=0&scope=bot'">Invite</button>
-            <button onclick="window.location.href='https://discord.gg/TYMVHDZ3T8'">Partners</button>
-            <button onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSeORFe4lpAfudvhLyUz2lttYyrjVzwXsnem0IxJnCau5N1QCg/viewform?usp=header'">Suggestions</button>
-            <button onclick="window.location.href='info.html'">Info</button>
+
+        <!-- Swipe Up Animation -->
+        <div class="swipe-up">Swipe Up ⬆</div>
+
+        <!-- Content (Hidden until Swipe Up) -->
+        <div class="content">
+            <div class="buttons">
+                <button onclick="redirectTo('https://discord.com/oauth2/authorize?client_id=1338143657877835797&permissions=8&integration_type=0&scope=bot')">Invite</button>
+                <button onclick="redirectTo('https://discord.gg/TYMVHDZ3T8')">Partners</button>
+                <button onclick="redirectTo('https://docs.google.com/forms/d/e/1FAIpQLSeORFe4lpAfudvhLyUz2lttYyrjVzwXsnem0IxJnCau5N1QCg/viewform?usp=header')">Suggestions</button>
+            </div>
         </div>
+
+        <!-- Footer -->
+        <footer>
+            Made by X
+        </footer>
     </div>
 
     <script src="script.js"></script>
 </body>
-</html>
+</html>html>
 ipt src="script.js"></script>
 </body>
 </html>
