@@ -1,10 +1,15 @@
-window.addEventListener('load', () => {
-    const splashScreen = document.getElementById('splash-screen');
-    const blackScreen = document.getElementById('black-screen');
-    const mainPage = document.getElementById('main-page');
-    const welcomeText = document.getElementById('welcome-text');
+// Remove Splash Screen After Load
+window.onload = function() {
+    setTimeout(() => {
+        document.querySelector('.splash').classList.add('hidden');
+        document.querySelector('.container').style.display = 'block';
+    }, 2500);
+};
 
-    // Splash Screen Fade Out
+// Button Redirects
+function redirectTo(url) {
+    window.location.href = url;
+} Out
     setTimeout(() => {
         splashScreen.style.opacity = '0'; // Fade out
         setTimeout(() => {
