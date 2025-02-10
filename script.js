@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
     // Splash Screen Timer
     setTimeout(() => {
@@ -9,8 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Start typing animation
             startTypingAnimation("typing-text", "Welcome to the Site!");
-        }, 1000);
-    }, 3000);
+        }, 1000);  // Adjust timing for smoother transition
+    }, 3000);  // Splash screen stays for 3 seconds
 
     // Swipe Up Gesture Detection
     let touchStartY = 0;
@@ -36,26 +35,20 @@ function startTypingAnimation(elementId, text) {
 
     function typeCharacter() {
         if (index < text.length) {
-            element.innerHTML += text.charAt(index);
-            index++;
-            setTimeout(typeCharacter, 100);
-        }
-    }
-
-    element.innerHTML = "";
-    typeCharacter();
-}
-
-// Redirect Function
-function redirectTo(url) {
-    window.location.href = url;
-}ex = 0;
-
-    function typeCharacter() {
-        if (index < text.length) {
             element.innerHTML += text.charAt(index); // Add character to element
             index++;
             setTimeout(typeCharacter, 100); // Delay for each character
+        }
+    }
+
+    element.innerHTML = ""; // Clear any existing text
+    typeCharacter(); // Start typing effect
+}
+
+// Redirect Function for buttons
+function redirectTo(url) {
+    window.location.href = url; // Redirect to the specified URL
+}for each character
         }
     }
 
